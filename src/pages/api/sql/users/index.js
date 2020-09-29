@@ -1,6 +1,7 @@
-const db = require("@/sequelize/db/db");
-const checkReqErrors = require("@/includes/status").checkReqErrors;
-const usersQuery = require("@/sequelize/querys/users");
+const db = require('../../../../sequelize/db/db');
+const checkReqErrors = require('@/includes/status').checkReqErrors;
+const usersQuery = require('../../../../sequelize/querys/users');
+
 
 async function auth(db) {
 	return db
