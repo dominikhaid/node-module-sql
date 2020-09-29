@@ -2,7 +2,7 @@ const { Sequelize } = require("sequelize");
 
 let configDb;
 try {
-	configDb = require("../../../config/config.json");
+	configDb = require("../../../config/sql-config.json");
 } catch (error) {
 	console.log(error);
 }
