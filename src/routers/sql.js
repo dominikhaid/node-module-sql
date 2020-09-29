@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../sequelize/sql/sql");
+const db = require("../sequelize/db/db");
 
 const checkReqErrors = require("../includes/status").checkReqErrors;
 const usersQuery = require("../sequelize/querys/users");
