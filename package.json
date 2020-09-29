@@ -1,0 +1,21 @@
+{
+  "name": "sequlizw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sqlite.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mariadb": "^2.4.2",
+    "mysql2": "^2.1.0",
+    "pg": "^8.3.3",
+    "sequelize": "^5.21.13",
+    "sequelize-cli": "^5.5.1",
+    "sqlite3": "^5.0.0"
+  },  
+  "scripts": {
+  "docker-mysql-up":"cd ./docker/mysql && docker-compose up  -d && cd ../../",
+  "docker-mysql-down":"cd ./docker/mysql && docker-compose down && cd ../../",
+  "docker-pg-up":"cd ./docker/postgres && docker-compose up  -d && cd ../../","docker-pg-down":"cd ./docker/postgres && docker-compose down  && cd ../../"
+  }
+}

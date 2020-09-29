@@ -1,0 +1,4 @@
+[{
+"file":"./src/bin/express.js",
+"selector":"startServer",
+"replacemant":"\nconst sqlRoutes = require('../routers/sql');\nserver.use('/api', sqlRoutes);\n"}]
