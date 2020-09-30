@@ -1,78 +1,50 @@
+# SQL (sqlite / mysql / postgres)
 
-# Node.js SQL to REST - MySQL / POSTGRES / SQLITE
+## Discription
+
+---
+
+This module is developed to extend our base server. It can be easily installed with the Plugin script from the base module. For detailed Information please see [@base-server](https://github.com/dominikhaid/node-base-server.git)
+
+### Module Features
+
+- Add support for sql dialects sqlite, mysql and postgres
+- Add ready to use docker-compose for mysql annd mysqladmin
+- Add ready to use docker-compose for postgres annd pgadmin4
+- Add sample data, functions and routes
 
 
-## Included Modules
 
-- Morgan Logger
-- Multer Upload Handler
-- Bodypaser
-- Jwt
-- Cors
-- Express
-- Next.js
-- Sequlize
-- Helmet
-- Webpack
-- .env
+### Setup
 
-## Files And Folders
+---
 
-- server-config.json -> CORS, HELMET, JWT and some other options
-- /public -> assets
-- /log -> morgan server logs
-- /src/bin -> basic server modules
-- /src/includes -> express middelware
-- /src/routes/ -> express routes
-- /src/pages/-> next.js paghes
-- /src/pages/api -> next.jss api routes
-- /data -> sql example data
-- /docker -> mysql / postgres docker config
-- /config -> sequlize db setup
-- /migrations -> sequlise cli migrations
-- /seeders -> sequlise cli seeders
+> git clone https://github.com/dominikhaid/node-base-server.git my-app
+> 
+> cd my-app
+> 
+> npm run plguin p=https://github.com/dominikhaid/node-module-sql.git
+> 
+> npx sequelize-cli db:migrate
+> 
+> npx sequelize-cli db:seed --seed 20200602234904-demo-user
+> 
+> npm run dev
+> 
+> visit http://localhost/api/db/users
 
-## Use
+**NOTE:**  all endpoinnts are documented in ./src/http
 
-1. yarn run install
-2. npx sequelize-cli db:migrate
-3. npx sequelize-cli db:seed --seed 20200602234904-demo-user
-4. yarn run dev
-5. visit http://localhost/api/db/users
 
-```
-With default configuration you will get an express server serving some api routes from sqlite.
-You can customize this in diffrent ways like the following.
-```
+
 
 ### Sequlize
 ```
 Sequlize unfiys all SQL dialects. You can use excat the same syntax for every dialect. 
 ```
-1. open /src/config/config.js
-2. setup your environments annd database connection here
-3. create a new database model here /src/sequlize/Models 
-4. create your queryss for the new model here /src/sequlize/querys
+- ./src/config/sql-config.json
 
-### Docker
-```
-If you want to use MySQL or Postgres instad of sqlite the doocker folder has everything you need.
-Don´t forget to change the /src/config/config.js to make sequlize use the connection.
-```
 
-### Server
-```
-You can just switch to Next.js by editing the server-config.json.
-Change "server": "express" to   "server": "next" eveything else is already setup.
-```
-
-### Scripts
-
-- yarn run install
-- yarn run start -> prod mode
-- yarn run dev -> dev mode 
-- yarn run build -> next build
-- yarn run format -> format files with prettier
 
 
 ## Routes
