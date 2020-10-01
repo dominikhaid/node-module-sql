@@ -37,53 +37,8 @@ This module is developed to extend our base server. It can be easily installed w
 
 
 
-
 ### Sequlize
 ```
 Sequlize unfiys all SQL dialects. You can use excat the same syntax for every dialect. 
 ```
 - ./src/config/sql-config.json
-
-
-
-
-## Routes
-```
-We have some default routes for you. They work in Express and Next.js.
-```
-- GET http://localhost/api/ -> api / server status
-```
-curl --location --request GET 'http://localhost/api/'
-```
-- GET http://localhost/api/db/users/ -> list all users
-```
-curl --location --request GET 'http://localhost/api/db/users/'
-```
-- GET http://localhost/api/db/users/:id -> find user by id
-```
-curl --location --request GET 'http://localhost/api/db/users/10'
-```
-- GET http://localhost/api/db/users/search/:email -> search user by email
-```
-curl --location --request GET 'http://localhost/api/db/users/search/dis.parturient@sapien.org'
-```
-
-- POST http://localhost/api/db/users/:email -> create new user if not exists form-data with the following fields is expected "email,first,last"
-```
-curl --location --request POST 'http://localhost/api/db/users/user@example.com' \
---form 'email=user@example.com' \
---form 'firstname=firstname' \
---form 'lastname=lastname'
-```
-- DELETE http://localhost/api/db/users/:email -> delete user 
-```
-curl --location --request DELETE 'http://localhost/api/db/users/user@example.com'
-```
-
-- UPDATE http://localhost/api/db/users/:email -> update user form-data with the following fields is expected "email,first,last"
-```
-curl --location --request PATCH 'http://localhost/api/db/users/user@example.com' \
---form 'email=user@example.com' \
---form 'firstname=new name' \
---form 'lastname=new last name'
-```
