@@ -8,7 +8,7 @@
 @new_user_name=User Example
 @new_user_lastname=User
 @new_user_firstname=Example
-@new_user_email=user@example3.de
+@new_user_email=user@example.de
 
 @update_user_name=User Example2
 @update_user_lastname=User 2
